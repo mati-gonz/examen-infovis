@@ -1,0 +1,23 @@
+#titulo {
+    text-align: center;
+}
+
+#subtitulos{
+    padding: 1% 1% 0% 1%;
+}
+
+#introduccion{
+    padding: 0% 1% 0% 1%;
+}
+
+#container-goles-temporada {
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    color: white;
+    background-color: black;
+}

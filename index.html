@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Matías González SIUU</title>
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h1 id="titulo">Examen IIC2026-2</h1>
+    <div>
+        <h3 id="subtitulos">Introducción</h3>
+        <p id="introduccion">El objetivo de esta visualización, es poder analizar los goles a lo largo de la carrera de uno 
+        de los mejores jugadores de fútbol de todos los tiempos, Cristiano Ronaldo. <br>
+        Para esto, se ha realizado una primera visualización en la cual se pueden ver los goles que ha hecho a lo largo de cada temporada
+        y es posible filtrar por temporada y equipo. <br>
+        En la segunda visualización, se puede ver la distribución total de goles por cada equipo en el que ha jugado
+        "El Bicho".
+
+        La información ha sido extraída del siguiente 
+        <a href="https://www.kaggle.com/datasets/azminetoushikwasi/cr7-cristiano-ronaldo-all-club-goals-stats">dataset</a>.
+        </p>
+    </div>
+
+    <h3 id="subtitulos">Goles por temporada</h3>
+    <div id="seccion-goles-temporada">
+        <div id="foto"></div>
+        <div id="container-vis-1"></div>
+    </div>
+
+    <h3 id="subtitulos">Goles por equipo</h3>
+    <div id="seccion-goles-equipo">
+        <div id="container-vis-2"></div>
+    </div>
+
+    <footer>
+        <p>Made by Matías González</p>
+    </footer>
+</body>
+<script src="./index.js" charset="utf-8"></script>
+</html>
