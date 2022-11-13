@@ -2,16 +2,16 @@ const WIDTH_VIS1 = 800;
 const HEIGHT_VIS1 = 600;
 const WIDTH_VIS2 = 1000;
 const HEIGHT_VIS2 = 1000;
-const DATA = "data/CR7_DATA.csv";
+const DATA = "https://raw.githubusercontent.com/mati-gonz/examen-infovis/main/assets/data/CR7_DATA.csv";
 
 var parseTime = d3.timeParse("%m/%d/%Y")
 
 var parseData= function(d) {
     return {
-        season: d.season,
-        competition: d.competition,
-        date: parseTime(d.date),
-        club: d.club,
+        season: d.Season,
+        competition: d.Competition,
+        date: parseTime(d.Date),
+        club: d.Club,
     };
 }
 
