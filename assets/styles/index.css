@@ -1,18 +1,48 @@
+body {
+    background-color: #FAB62D;
+}
+
 #titulo {
     text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 80px;
 }
 
 #subtitulos{
-    padding: 1% 1% 0% 1%;
+    padding: 1% 1% 0% 3%;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+}
+
+#cris-text{
+    font-size: 110px;
 }
 
 #introduccion{
-    padding: 0% 1% 0% 1%;
+    padding: 0% 1% 0% 3%;
 }
 
-#container-goles-temporada {
+#seccion-goles-equipo {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    border: solid 2px black;
+    background-color: aliceblue;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 6px;
+}
+
+#container-vis-2{
+    margin-top: 5%;
+}
+
+#foto-CR7 {
+    width: 90%;
+    height: 85%;
+    position: relative;
+    top: 5%;
+    left: 10%;
 }
 
 footer {
