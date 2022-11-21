@@ -37,32 +37,30 @@ header {
     justify-content: space-around;
     border: solid 2px black;
     background-color: aliceblue;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
     border-radius: 6px;
 }
 
 #seccion-goles-temporada {
-    /* display: flex;
+    display: flex;
     flex-direction: row;
-    justify-content: space-around; */
+    justify-content: space-around;
     border: solid 2px black;
     background-color: aliceblue;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
     border-radius: 6px;
+}
+
+#filtros {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 #container-vis-2{
     margin-top: 5%;
-}
-
-#container-vis-1{
-    border: solid 2px black;
-    background-color: aliceblue;
-    margin-left: 2%;
-    margin-right: 2%;
-    border-radius: 6px;
 }
 
 #foto-CR7 {
