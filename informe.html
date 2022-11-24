@@ -1,11 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/informe.css">
     <title>Informe Examen</title>
 </head>
 <body>
+    <header>
+        <h1 id="titulo">Informe Examen IIC2026 -  Matías González</h1>
+    </header>
+    <section>
+        <h2>1. Caracterización del dominio</h2>
+        <h3>1.1 Descripción del dataset a utilizar</h3>
+        <p>El dataset a utilizar, contiene información de todos los goles que ha marcado el futbolista portugués Cristiano Ronaldo a nivel de clubes, es decir, no incluye los goles que ha convertido representando a la selección de Portugal.
+            Este tiene un total de 701 filas y 13 columnas. Fue extraído de <a href="https://www.kaggle.com/datasets/azminetoushikwasi/cr7-cristiano-ronaldo-all-club-goals-stats">Kaggle</a> y se va actualizando semanalmente. <br>
+            Por lo tanto, la misión principal de la visualización será el poder mostrar estos datos de manera resumida y fácil de comparar. <br>
+            <br>
+        Cada fila del dataset representa un gol, y los atributos (columnas) son los siguientes:</p>
+        <ul id="lista">
+            <li>Season (string): Temporada en la que marcó el gol. Ejemplo: "02/03" es la temporada del 2002/2003 (calendario europeo).</li>
+            <li>Competition (string): Competencia en la que marcó el gol. Ejemplo: UEFA Champions League.</li>
+            <li>Matchday (string): Instancia del campeonato. Ejemplo: Si es una liga es número del partido, si es una copa, entonces es "Group Stage" o "Semi Finals".</li>
+            <li>Date (Date): Fecha en la que se marcó el gol.</li>
+            <li>Venue (string): Indica si es un partido de local o de visita (Home/Away).</li>
+            <li>Club (string): Club por el que marcó el gol.</li>
+            <li>Opponent (string): Oponente al que le marcó el gol.</li>
+            <li>Result (string): Resultado final del partido.</li>
+            <li>Playing_Position (string): Posición en la que estaba jugando Cristiano cuando marcó el gol.</li>
+            <li>Minute (string): Minuto en el que marcó el gol.</li>
+            <li>At_score (Date): Cómo quedó el marcador después de la anotación.</li>
+            <li>Type (string): Cómo hizo el gol. Ejemplo: cabezazo, corrida personal, etc.</li>
+            <li>Goal_assist (string): Quién le dio la asistencia (en caso de que hubiera asistidor).</li>
+        </ul>
     
+        <h3>1.2 Pre-procesamiento del dataset</h3>
     
+        <p>Si bien el dataset es bien interesante, ya que contiene mucha información que podría ser útil, para fines del examen se realizó un pre procesamiento. En primer lugar, se eliminaron algunas columnas,  dejando solo:</p>
+    
+        <ul id="lista">
+            <li>Season (string): Temporada en la que marcó el gol.</li>
+            <li>Competition (string): Competencia en la que marcó el gol.</li>
+            <li>Date (Date): Fecha en la que se marcó el gol.</li>
+            <li>Club (string): Club por el que marcó el gol.</li>
+        </ul>
+    
+        <p>Además, se verificó si es que habían datos nulos, sin embargo, no había ninguno. Después, se llevó a cabo un procedimiento de normalizar las Date, ya que existían distintos formatos, algunas venía de la forma
+        "mm-dd-yy" y otras "mm/dd/yy". Se dejaron todas de la segunda forma.</p>
+    
+        <p>Por último, se pudo notar que la tenmporada "2012/2013" no venía en el formato estándar que seguían las otras ("12/13") sino que venía codificada como "Dec-13", por lo que se tuvó que cambiar eso también.</p>
+    
+        
+        <h3>1.3 Potenciales usuarios y tipo de uso de la herramienta</h3>
+    
+        <p>Si bien los principales potenciales usuarios del dataset son todos los fanáticos del futbol, y en especial quienes son fan de Cristiano Ronaldo, cualquier usuario que ubique quién es Cristiano Ronaldo es un potencial usuario
+            de la visualización, y la verdad es que no son pocas personas, ya que recientemente se ha convertido en la persona más seguida en redes sociales en toda la historia,
+        llegando a tener más de 500 millones de seguidores en Instagram. Además, a sus 37 años ya se ha consagrado como una leyenda del deporte, rompiendo todo tipo de records, como por ejemplo es el máximo goleador en la historia según la FIFA,
+        máximo anotador en competiciones europeas, único jugador en marcar en 5 mundiales distintos, entre otros. <br> Por todo esto, se puede decir que CR7 tiene una fanaticada consolidada, quienes podrán darle un uso a la herramienta y que podrán
+        tanto entretenerse como informarse con ella, pero también podrán hacer uso de ella personas que simplemente quieran descubrir nueva información, ya que es muy fácil de ocupar y muestra un resumen de los principales datos que le gustaría comparar a un fanático o cualquier persona.</p>
+    </section>
+    <section>
+        <h2>2. Abstracción de datos y tareas</h2>
+        <h3>2.1 Abstracción de datos</h3>
+        <p> En este caso, cada gol o fila del dataset es un dato del tipo ítem, el cual tiene 4 atributos de interés:</p>
+        <ul id="lista">
+            <li>Season: Es un atributo de tipo ordinal y secuencial, pues corresponde a temporadas que pueden ordenarse según los años, pero no tienen una aritmetica definida.</li>
+            <li>Competition: Es un atributo de tipo categórico, pues solo indica el nombre de la competición en cual se marcó el gol.</li>
+            <li>Date: Es un atributo de tipo cuantitativo y cíclico, pues es la fecha en la que se marcó el gol, de forma que puede repetirse el siguiente año o en 3 más.</li>
+            <li>Club: Es un atributo de tipo categórico, indica el nombre del club en el que estaba cuando marcó el gol.</li>
+        </ul>
+
+        <h3>2.1 Abstracción de tareas</h3>
+
+        <p>En cuanto a la abstracción de tareas, se han podido identificar 3 principales tareas y 1 adicional, que se pueden llevar a cabo mediante las visualizaciones:</p>
+        <ul id="lista">
+            <li>
+                Visualización 1: Goles por temporada
+                <ul>
+                    <li>
+                        Acción: Consultar-Comparar, Objetivo: Tendencias de goles por temporada (principal). <br>
+                        Mediante los distintos area charts, se puede comparar la tendencia de los goles a lo largo de las 2 temporadas elegidas por el usuario. Además, se puede hacer zoom para ver las diferencias más pequeñas.
+                    </li>
+                    <li>
+                        Acción: Consumir-Descubrir Información, Objetivo: Outliers, meses de la temporada en los que anotó muy poco o mucho <br>
+                        Cuando se tiene una visualización sobre Cristiano Ronaldo, ver meses en los que solo anotó 1 gol es muy raro, de forma que
+                        mediante los area chart podemos descubrir información, viendo en qué meses y años anotó muy pocos goles. De la misma manera, se puede indentificar facilmente cuando estuvo en racha y anotó muchos goles.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Visualización 2: Goles por equipo
+                <ul>
+                    <li>
+                        Acción: Consultar-Resumir, Objetivo: Features, total de goles por equipo y competición (principal) <br>
+                        Las distintas lineas, codificadas de distintos colores dado el equipo, le permiten al usuario ver un resumen de los goles que ha metido en cada equipo, y también en cada competición según seleccione en el dropdown.
+                    </li>
+                    <li>
+                        Acción: Consultar-Comparar, Objetivo: Features, total de goles por equipo y competición (principal) <br>
+                        Las distintas lineas, codificadas de distintos colores dado el equipo, le permiten al usuario comparar la cantidad de goles que ha metido en cada equipo, y también en cada competición según seleccione en el dropdown. Ya que se muestra la cantidad de goles cuando se pasa el mouse por encima de cada una.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>3. Codificación visual y de interacción</h2>
+        <h3>3.1 Listado de elecciones de marcas e idioms</h3>
+        <p>En el caso de la Visualización 1: Goles por temporada:</p>
+        <ul id="lista">
+            <li>La marca utilizada fueron las áreas (marca bi dimensional), las cuales están representando una temporada en específico.</li>
+            <li>En cuanto a los canales utilizados, la altura del área está codificando la cantidad de goles anotados en un mes, mientras que el ancho codifica el mes de la temporada en el que se anotó el gol.
+                 El color está codificando el equipo en el cual se encontraba Cristiano Ronaldo en esa temporada, por ende es el distintivo de cada equipo.</li>
+            <li>En esta visualización se aplicó d3.zoom para poder tener una mejor visualización de la diferencia de las áreas, cuando estas son muy apretadas, o cuando a simple vista no es posible distinguir las diferencias de ambas.</li>
+        </ul>
+        <p>En el caso de la Visualización 2: Goles por equipo:</p>
+        <ul id="lista">
+            <li>La marca utilizada fueron las lineas o barras (marca uni dimensional) de forma horizontal.</li>
+            <li>En cuanto a los canales utilizados, el largo de cada barra está codificando la cantidad total de goles, dada una determinada competición. Mientras que el color de éstas, codifica el equipo al que pertenecen esos goles.</li>
+            <li>En esta visualización se implementó el filtro de los datos, mediante el cual es posible filtrar la cantidad total de goles según la competencia en la cual fueron anotados.</li>
+            <li>También se implementó el efecto con el mouse, de que al pasar sobre la barra esta se destaca por sobre las demas debido a que baja la opacidad de las otras y además, en la punta de la barra es posible ver el número total específico de 
+                goles que se anotó en esa competición, ya que solo con el eje de abajo se puede ver una aproximación, pero no se logra apreciar el número específico de goles.</li>
+            </li>
+        </ul>
+    </section>
+
 </body>
 </html>

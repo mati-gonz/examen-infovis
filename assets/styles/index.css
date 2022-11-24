@@ -9,6 +9,12 @@ header {
     padding: 3rem 2rem;
 }
 
+#btn-quitar-filtro {
+    width: 15%;
+    height: 35px;
+    border-radius: 5px;
+}
+
 #titulo {
     text-align: center;
     font-family: 'Bebas Neue', cursive;
@@ -42,10 +48,31 @@ header {
     border-radius: 6px;
 }
 
+#selector-1 {
+    padding: 0% 2% 0% 2%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+#selector-2 {
+    padding: 0% 2% 0% 2%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+#filtro-competiciones {
+    padding: 0% 2% 0% 2%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
 #seccion-goles-temporada {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    column-gap: 5%;
     border: solid 2px black;
     background-color: aliceblue;
     margin-left: 4%;
@@ -53,10 +80,24 @@ header {
     border-radius: 6px;
 }
 
+#filtro-2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 35px;
+    margin-top: 5%;
+}
+
 #filtros {
+    margin-top: 2%;
     display: flex;
+    width: 40%;
+    row-gap: 3%;
     flex-direction: column;
-    justify-content: flex-start;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 35px;
+}
+
+#container-vis-1{
+    margin-left: 4%;
 }
 
 #container-vis-2{

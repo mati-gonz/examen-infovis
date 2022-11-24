@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    background-color: #efefef;
+}
+
+header {
+    background-color: #364552;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+#titulo {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 80px;
+}
+
+h2 {
+    padding: 1% 1% 0% 3%;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+}
+
+h3 {
+    padding: 1% 1% 0% 3%;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+}
+
+#lista {
+    border: solid 2px black;
+    margin-left: 3%;
+    border-radius: 4px;
+    padding: 1% 2% 1% 2%;
+    width: 25%;
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: aliceblue;
+    font-size: 20px;
+}
+
+p {
+    padding: 0% 1% 0% 3%;
+    width: 45%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+}

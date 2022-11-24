@@ -32,24 +32,27 @@
     <div id="seccion-goles-temporada">
         <div id="container-vis-1"></div>
         <div id="filtros">
-            <div>
+            <div id="container-selector-1">
                 <label for="seleccion-temporada-1">Selecciona una Temporada</label>
-                <select name="seleccion-temporada-1" id="seleccion-temporada">
-                    <option value="03/04">03/04</option>
-                </select>
             </div>
-            <div>
+            <div id="container-selector-2">
                 <label for="seleccion-temporada-2">Selecciona otra Temporada</label>
-                <select name="seleccion-temporada-2" id="seleccion-temporada">
-                    <option value="04/05">04/05</option>
-                </select>
             </div>
+            <button id="btn-quitar-filtro" disabled>Quitar filtro</button>
         </div>
     </div>
 
     <h3 id="subtitulos">Goles por equipo</h3>
     <div id="seccion-goles-equipo">
         <div id="container-vis-2"></div>
+        <div id="filtro-2">
+            <label for="filtro-competiciones">Goles en</label>
+            <select name="filtro-competiciones" id="filtro-competiciones">
+                <option value="todas">Todas las competencias</option>
+                <option value="liga">Liga Local</option>
+                <option value="champions">UEFA Champions League</option>
+            </select>
+        </div>
         <div id="container-foto">
             <img id="foto-CR7" src="./assets/CR7_Images/Real Madrid-CR7.png" alt="">
         </div>
