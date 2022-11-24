@@ -9,12 +9,6 @@ header {
     padding: 3rem 2rem;
 }
 
-#btn-quitar-filtro {
-    width: 15%;
-    height: 35px;
-    border-radius: 5px;
-}
-
 #titulo {
     text-align: center;
     font-family: 'Bebas Neue', cursive;
